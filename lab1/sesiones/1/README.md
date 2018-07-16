@@ -2,7 +2,7 @@
 
 > **Objetivos**
 > * Reforzar los conceptos discutidos en el laboratorio.
-> * Ir ganando experiencia en la resolución de problemas empleando lenguaje C.
+> * Ir ganando experiencia en la resolución de problemas empleando lenguaje C. 
 
 ## 1. Ejemplos de repaso
 
