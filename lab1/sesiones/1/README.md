@@ -129,7 +129,9 @@ int main () {
 ```
 
 a. Compile y ejecute el código fuente anteriormente mostrado. ¿Qué es lo que hacen las funciones  srand() y rand()? (Los singientes enlaces pueden serle de utilidad: [1](http://www.chuidiang.org/clinux/funciones/rand.php) y [2](http://arantxa.ii.uam.es/~swerc/ole/ejemplos/crandom.html))
+
 b. Escriba una función que genere un número aleatorio entre a y b. **Ayuda**: Use las funciones **srand()** y **rand()** anteriormente mencionadas.
+
 c. Realice un programa que invocando la función anteriormente creada, funcione de manera similar al programa analizado en el punto a.
 
 4. Escriba una función que tome un valor entero y devuelva el número con sus dígitos en reversa. Por ejemplo, dado el numero 7631, la función deberá devolver 1367.
