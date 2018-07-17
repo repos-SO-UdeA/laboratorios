@@ -459,9 +459,7 @@ Ahora responda las siguientes preguntas:
 | p2  |   |
 | p3  |   |
 
-## 4. Problemas de programacion
-
-### 4.1. Miselanea de problemas resueltos a modo de repaso
+## 4. Problemas de programacion resueltos
 
 1. Escriba una funcion que retorne el producto de un array teniendo en cuenta la siguiente forma:
 
@@ -709,11 +707,11 @@ void test(void) {
 }
 ```
 
-### 4.2. Ejercicios de programación.
+## 5. Ejercicios de programación.
 
 Para cada uno de los ejercicio de programacion propuestos a continuacion, realice la respectiva funcion de test para probar el correcto funcionamiento de lo que se pide en el ejercicio.
 
-1. Hacer que barra una cadena de caracteres en busca de un caracter especifico. La funcion deberá retornar el numero de veces que aparece este caracter o -1 en caso de que no este. La forma de la funcion se muestra a continuación:
+1. **Problema de programación**: Hacer que barra una cadena de caracteres en busca de un caracter especifico. La funcion deberá retornar el numero de veces que aparece este caracter o -1 en caso de que no este. La forma de la funcion se muestra a continuación:
 
 ```C
 /**
@@ -728,7 +726,7 @@ int contarCaracter(char *array, char ch) {
 }
 ```
 
-2. Hacer una funcion que permita que un usuario obtenga el subindice asociado a la primera aparicion de un caracter en un array. Si el caracter no esta la función debera retornar -1. Haga uso de la funcion del punto 1 para validar la presencia del caracter. A continuacion se muestra la forma de la función:
+2. **Problema de programación**: Hacer una funcion que permita que un usuario obtenga el subindice asociado a la primera aparicion de un caracter en un array. Si el caracter no esta la función debera retornar -1. Haga uso de la funcion del punto 1 para validar la presencia del caracter. A continuacion se muestra la forma de la función:
 
 ```C
 /**
@@ -745,7 +743,7 @@ int obtenerIndice(char *array, char ch) {
 
 Para clarificar un poco la cosa, si por ejemplo la cadena es **hola: que mas** y el caracter a buscar es **:** la funcion debera retornar **4**. Por otro lado, si el caracter a buscar es la **a**, la funcion retornara **3**. Finalmente, si el caracter ingresado es **z** la funcion retornara **-1**.
 
-3. Obtener la subcadena de una cadena dada a partir de un subindice siguiendo la siguiente funcion.
+3. **Problema de programación**: Obtener la subcadena de una cadena dada a partir de un subindice siguiendo la siguiente funcion.
 
 ```C
 /**
@@ -811,7 +809,7 @@ Responda las siguientes preguntas:
 2. Describa las funciones ```getchar``` y ```putchar```
 3. ¿Cuales son las condiciones necesarias para que el primer ciclo deje de ejecutarse?
 
-5. **Codigo**: Codifique un programa que permita convertir en mayuscula una cadena de caracteres ingresada por teclado y solo terminara su ejecución cuando el usuario emplee la combinación de teclas . Por ejemplo si la entrada del programa es:
+5. **Problema de programación**: Codifique un programa que permita convertir en mayuscula una cadena de caracteres ingresada por teclado y solo terminara su ejecución cuando el usuario emplee la combinación de teclas . Por ejemplo si la entrada del programa es:
 
 ```
 1234abcdABCD!
@@ -1028,132 +1026,6 @@ Entrada > sisaz
 SISAZ
 Entrada > ^C
 ```
-
-6. **Análisis de código**: En el siguiente [video](https://www.youtube.com/watch?v=jl4r7u7IfJY) se explica el paso de parametros por linea de comandos. El código analizado, tomado del siguiente [enlace](http://bluefever.net/Downloads/BeginC/ch51.c) se muestra a continuación:
-
-```C
-#include "stdio.h"
-#include "string.h"
-
-// Codigo tomado de: http://bluefever.net/Downloads/BeginC/ch51.c
-
-int main(int argc, char *argv[]) {
-  printf("\nmain() : argc : %d \n", argc);
-  int index = 0;
-  for(index = 0; index < argc; ++index) {
-    // printf("main() : argv[%d] : %s\n",index,argv[index]);
-    if( strncmp( argv[index], "debug", 5) == 0 ) {
-      printf("main() : PROGRAM DEBUG MODE\n");
-    } else if ( strncmp( argv[index], "-file", 5) == 0 ) {
-      printf("main() : PROGRAM READ FILENAME : %s\n", argv[index + 1]);
-    }
-  }
-  printf("\nmain(): Program Quit\n");
-  return 0;
-}
-```
-Responda las siguientes preguntas:
-* ¿Que hacen los parametros argc y argv?
-* ¿Como se usa el programa? (Observe el video).
-
-7. **Análisis de código**: Codifique el siguiente archivo fuente:
-
-```C
-#include <stdio.h>
-#include <stdlib.h>
-#define N 20
-
-int edad_en_meses(int);
-
-int main(int argc, char *argv[])
-{
-  int edad = atoi(argv[1]);
-  int meses = edad_en_meses(edad);
-  printf("Edad %d \n", meses);
-  return 0;
-}
-
-int edad_en_meses(int anios){
-  int mes = anios * 12;
-  return mes;
-}
-```
-
-Para entender el codigo anterior y como usarlo vea el siguiente [video](https://www.youtube.com/watch?v=IhQp6eTkmaQ&list=PLlTZ99qnw3zIeOKP8YfMxaKt0GDhAKtHu&index=7) y responda las siguientes preguntas:
-1. ¿Que hace la funcion atoi?
-2. Ademas de atoi existen otras funciones que permitan convertir cadenas de caracteres a numeros reales ¿cuales?.
-3. Existen funciones que convierten valores numericos a cadenas de caracteres  ¿cuales?
-
-8. **Manejo de archivos**: Hacer un programa que permita obtener las siguientes estadisticas de un archivo de texto:
-1. Numero de caracteres del archivo.
-2. Numero de lineas.
-3. Numero de palabras (cada palabra es separada por un whitespace o una nueva linea).
-4. Numero de whitespaces (caracteres espacio ' ' o tab '\n')
-5. Numero de letras en mayuscula.
-6. Numero de letras en minuscula.
-7. Numero de digitos.
-
-El ejecutable (compilelo como textstats) debera complir los siguientes requerimientos:
-1. Recibir argumentos de entrada por linea de comandos. Cada uno de los argumentos sera un archivo el nombre de un archivo de entrada. Por ejemplo, suponga que tiene un archivo llamado texto1.txt, de modo que la invocación del ejecutable será ```./textstats texto1.txt```. Asi mismo se espera una salida como la siguiente.
-
-```
-./textstats texto1.txt
-Obteniendo estadisticas...
-- texto1.txt --> generando reporte texto1_stats.txt
-Estadisticas culminadas
-```
-
-2. Suponiendo que el archivo de entrada texto1.txt tuviera un contenido como el mostrado a continuación.
-
-```
-1234 56
-hello this is a word
-Finally this line !
-```
-El archivo generado (texto1_stats.txt) deberá tener un contenido como el siguiente:
-
-```
-chars: 49
-words: 11
-lines: 3
-whitespaces: 8
-uppercase: 1
-lowercase: 30
-digits: 6
-```
-El nombre del archivo de texto asociado a las estadisticas, deberá contener el nombre del archivo antes de la extención seguido por la cadena stats.txt. Asi, si el archivo se llamara file.dat, el archivo generado asociado a las estadisticas seria file_stats.dat
-
-3. Se pueden pasar varios archivos de texto de diferentes extenciones. A continuación se muestra un caso de uso y la respectiva salida del programa:
-
-```
-./textstats texto1.txt texto2.dat
-Obteniendo estadisticas...
-- texto1.txt --> generando reporte texto1_stats.txt
-- texto2.dat --> generando reporte texto2_stats.txt
-Estadisticas culminadas
-```
---------------------
-
-
-4. En caso de no pasar parametros se deberá desplegar una ayuda que informe como usar el programa.
-
-9. **Punto 7 - Cadenas**: https://github.com/remzi-arpacidusseau/ostep-projects/tree/master/initial-utilities
-(empleando la notacion puntero -- zip - unzip)
-
-10. **Punto 8 - Archivos**: https://github.com/remzi-arpacidusseau/ostep-projects/tree/master/initial-utilities
-(sort -- zip - unzip)
-
-http://pages.cs.wisc.edu/~remzi/Classes/537/Spring2010/Projects/p1.html
-
-http://pages.cs.wisc.edu/~remzi/Classes/537/Spring2009/Projects/p1.html
-
-
-https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/
-
-
-
-
-
 
 
 ## Enlaces de utilidad
