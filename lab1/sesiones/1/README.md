@@ -31,11 +31,23 @@ equivalente:
 
 **Solucion**: [ejemplo5_sol.c](ejemplo5_sol.c)
 
-## 2. Ejemplos de repaso
+## 2. Ejercicios de repaso
 
 ### 2.1. Estructuras de programación
 
-1. Escriba un programa en C para desplegar la tabla de multiplicación desde 1 hasta N.
+1. El propietario de Harry’s Car Sales paga a cada vendedor una comisión basada en sus ventas trimestrales. Los rangos de ventas y las correspondientes tasas son mostrades en la tabla que aparece a continuación:
+
+| Ventas trimestrales ($) | Comisión |
+|---|---|
+| 0 - 20000 |  Multiplicar las ventas por 5% |
+|  20001-50000 | Multiplicar la ventas sobre 20000 por 7% y entonces agregue 1000 al resultado |
+|  50001 o mas | Multiplicar la ventas sobre 50000 por 10% y entonces agregue 3100 al resultado  | 
+
+Teniendo en cuenta lo anterior lleve a cabo las siguientes tareas:
+* Comprenda el problema y realice casos de obteniendo las comisiones para los siguientes valores de ventas: 20000, 20001, 30000, 50000, 50001, 75000, y –3.
+* Codifique el algoritmo en C de modo que permita el calculo de las comisiones. Lleve a cabo las pruebas con los casos de test elegidos en el item anterior.
+
+2. Escriba un programa en C para desplegar la tabla de multiplicación desde 1 hasta N.
 
 Test de entrada:
 
@@ -52,7 +64,7 @@ Tabla de multiplicación desde 1 hasta 8:
 1x10 = 10, 2x10 = 20, 3x10 = 30, 4x10 = 40, 5x10 = 50, 6x10 = 60, 7x10 = 70, 8x10 = 80
 ```
 
-2. Escriba un programa en C para imprimir la siguiente secuencia (dado el numero de renglones):
+3. Escriba un programa en C para imprimir la siguiente secuencia (dado el numero de renglones):
 
 ```
 1
@@ -66,7 +78,19 @@ Tabla de multiplicación desde 1 hasta 8:
 
 **Nota**: Los siguientes programas deben ser resueltos empleando funciones.
 
-1. Escriba un programa en C para encontrar la suma de las series [ 1-X^2/2!+X^4/4!- ...]:
+1. Escriba una función llamada múltiplo que tome dos enteros y determine si el segundo es múltiplo del primero. La función deberá tomar dos argumentos enteros y devolver 1 si el segundo es un múltiplo del primero y 0 si no. Luego, utilice esta función en un programa que acepte como entrada una serie de pares de enteros.
+
+2. Escribir un programa que lea dos números **x** y **n** y en una función, calcule la suma de la progresión geométrica: 
+
+```
+1 + x + x^2 + x^3 + x^4 + ⋯ + x^n
+```
+
+3. Escriba un programa en C para encontrar la suma de las series: 
+
+```
+1 - x^2/2! + x^4/4! - ...
+```
 
 Test data:
 ```
@@ -80,7 +104,37 @@ Salida esperada:
 suma: -0.415873
 ```
 
-2. Las computadoras están jugando un papel creciente en la educación. Escriba un programa que ayudaría a un alumno de escuela primaria a aprender a multiplicar. Utilice rand() para producir dos enteros positivos de un dígito. A continuación debería imprimir una pregunta coma la siguiente:
+4. Dado el siguiente código fuente:
+
+```C
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main () { 
+  int N, M, cant, i, aleatorio;
+  printf("Digite la cantidad de números que desea generar: ");
+  scanf("%d",&cant);
+  printf("Digite los limites (primero el superior, luego el inferior): ");
+  scanf("%d%d",&N,&M);
+  srand(time(NULL)); // Inicializacion del generador
+  for(i = 0; i < cant; i ++) { 
+    aleatorio = rand()%(N-M+1)+M; //Genera un numero entre M y N
+    printf("%d ", aleatorio);
+  } 
+  printf("\n", aleatorio);
+  system("PAUSE");
+  return 0;
+}
+```
+
+a. Compile y ejecute el código fuente anteriormente mostrado. ¿Qué es lo que hacen las funciones  srand() y rand()? (Los singientes enlaces pueden serle de utilidad: [1](http://www.chuidiang.org/clinux/funciones/rand.php) y [2](http://arantxa.ii.uam.es/~swerc/ole/ejemplos/crandom.html))
+b. Escriba una función que genere un número aleatorio entre a y b. **Ayuda**: Use las funciones **srand()** y **rand()** anteriormente mencionadas.
+c. Realice un programa que invocando la función anteriormente creada, funcione de manera similar al programa analizado en el punto a.
+
+4. Escriba una función que tome un valor entero y devuelva el número con sus dígitos en reversa. Por ejemplo, dado el numero 7631, la función deberá devolver 1367.
+
+5. Las computadoras están jugando un papel creciente en la educación. Escriba un programa que ayudaría a un alumno de escuela primaria a aprender a multiplicar. Utilice rand() para producir dos enteros positivos de un dígito. A continuación debería imprimir una pregunta coma la siguiente:
 
 ```
 ¿Cuánto es 6 veces 7?
