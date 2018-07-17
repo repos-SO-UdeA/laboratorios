@@ -61,7 +61,7 @@ La colección completa de modificadores a utilizar con gcc se encuentra en su p�
 
 ## Ejercicios de refuerzo
 
-1. En el editor de textos (ojala emacs) codifique el siguiente código fuente:
+1. **Compilando una primera aplicación**: En el editor de textos (ojala emacs) codifique el siguiente código fuente:
 
 ```C 
 #include <stdio.h>
@@ -77,3 +77,59 @@ int main()
 4. Si hay errores, volver al código y corregirlos. De lo contrario ejecute el programa. 
 
 > Nota: El código anterior también se encuentra disponible online en el siguiente [link](https://goo.gl/yjRZaZ)
+
+2. **Análisis de código**: En el siguiente [video](https://www.youtube.com/watch?v=jl4r7u7IfJY) se explica el paso de parametros por linea de comandos. El código analizado, tomado del siguiente [enlace](http://bluefever.net/Downloads/BeginC/ch51.c) se muestra a continuación:
+
+```C
+#include "stdio.h"
+#include "string.h"
+
+// Codigo tomado de: http://bluefever.net/Downloads/BeginC/ch51.c
+
+int main(int argc, char *argv[]) {
+  printf("\nmain() : argc : %d \n", argc);
+  int index = 0;
+  for(index = 0; index < argc; ++index) {
+    // printf("main() : argv[%d] : %s\n",index,argv[index]);
+    if( strncmp( argv[index], "debug", 5) == 0 ) {
+      printf("main() : PROGRAM DEBUG MODE\n");
+    } else if ( strncmp( argv[index], "-file", 5) == 0 ) {
+      printf("main() : PROGRAM READ FILENAME : %s\n", argv[index + 1]);
+    }
+  }
+  printf("\nmain(): Program Quit\n");
+  return 0;
+}
+```
+Responda las siguientes preguntas:
+* ¿Que hacen los parametros argc y argv?
+* ¿Como se usa el programa? (Observe el video).
+
+3. **Análisis de código**: Codifique el siguiente archivo fuente:
+
+```C
+#include <stdio.h>
+#include <stdlib.h>
+#define N 20
+
+int edad_en_meses(int);
+
+int main(int argc, char *argv[])
+{
+  int edad = atoi(argv[1]);
+  int meses = edad_en_meses(edad);
+  printf("Edad %d \n", meses);
+  return 0;
+}
+
+int edad_en_meses(int anios){
+  int mes = anios * 12;
+  return mes;
+}
+```
+
+Para entender el codigo anterior y como usarlo vea el siguiente [video](https://www.youtube.com/watch?v=IhQp6eTkmaQ&list=PLlTZ99qnw3zIeOKP8YfMxaKt0GDhAKtHu&index=7) y responda las siguientes preguntas:
+*. ¿Que hace la funcion atoi?
+*. Ademas de atoi existen otras funciones que permitan convertir cadenas de caracteres a numeros reales ¿cuales?.
+*. Existen funciones que convierten valores numericos a cadenas de caracteres  ¿cuales?
+
