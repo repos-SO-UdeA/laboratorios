@@ -584,7 +584,7 @@ int product(const int *array, int size) {
   return p;
 }
 ```
-El codigo solucion se encuetra en: ....
+El codigo solucion se encuetra en el codigo: [code_4_2.c](code_4_2.c)
 
 3. Codifique una funcion que encuentre el valor minimo y maximo de un array siguiendo el formato mostrado a continuación:
 
@@ -1026,7 +1026,14 @@ Entrada > sisaz
 SISAZ
 Entrada > ^C
 ```
+6. **Problema de programación**: Dado un vector x de n elementos reales, donde n es impar, diseñar una función que calcule y devuelva la mediana de ese vector. La mediana es el valor tal que la mitad de los números son mayores que el valor y la otra mitad son menores. Escribir un programa que compruebe la función.
 
+7. **Problema de programación**: Se trata de resolver el siguiente problema escolar. Dadas las notas de los alumnos de un colegio en el primer curso de bachillerato, en las diferentes asignaturas (5, por comodidad), se trata de calcular la media de cada alumno, la media de cada asignatura, la media total de la clase y ordenar los alumnos por orden decreciente de notas medias individuales.
+
+**Nota**: utilizar como algoritmo de ordenación el método Shell.
+
+**Recomendaciones**:
+Para los dos ultimos problemas se sugiere revisar el capitulo de muestra de Algoritmos de ordenacion y busqueda del libro de Joyanes Aguilar el cual puede ser descargado del siguiente [enlace](material_apoyo/joyanes_c_java_y_uml_capitulo_muestra.pdf)
 
 ## Enlaces de utilidad
 * http://csweb.cs.wfu.edu/~fulp/CSC112/codeStyle.html
