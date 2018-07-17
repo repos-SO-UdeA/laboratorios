@@ -35,7 +35,7 @@ equivalente:
 
 ### 2.1. Estructuras de programación
 
-1. El propietario de Harry’s Car Sales paga a cada vendedor una comisión basada en sus ventas trimestrales. Los rangos de ventas y las correspondientes tasas son mostrades en la tabla que aparece a continuación:
+**P1**. El propietario de Harry’s Car Sales paga a cada vendedor una comisión basada en sus ventas trimestrales. Los rangos de ventas y las correspondientes tasas son mostrades en la tabla que aparece a continuación:
 
 | Ventas trimestrales ($) | Comisión |
 |---|---|
@@ -47,7 +47,7 @@ Teniendo en cuenta lo anterior lleve a cabo las siguientes tareas:
 * Comprenda el problema y realice casos de obteniendo las comisiones para los siguientes valores de ventas: 20000, 20001, 30000, 50000, 50001, 75000, y –3.
 * Codifique el algoritmo en C de modo que permita el calculo de las comisiones. Lleve a cabo las pruebas con los casos de test elegidos en el item anterior.
 
-2. Escriba un programa en C para desplegar la tabla de multiplicación desde 1 hasta N.
+**P2**. Escriba un programa en C para desplegar la tabla de multiplicación desde 1 hasta N.
 
 Test de entrada:
 
@@ -64,7 +64,7 @@ Tabla de multiplicación desde 1 hasta 8:
 1x10 = 10, 2x10 = 20, 3x10 = 30, 4x10 = 40, 5x10 = 50, 6x10 = 60, 7x10 = 70, 8x10 = 80
 ```
 
-3. Escriba un programa en C para imprimir la siguiente secuencia (dado el numero de renglones):
+**P3**. Escriba un programa en C para imprimir la siguiente secuencia (dado el numero de renglones):
 
 ```
 1
@@ -78,15 +78,15 @@ Tabla de multiplicación desde 1 hasta 8:
 
 **Nota**: Los siguientes programas deben ser resueltos empleando funciones.
 
-1. Escriba una función llamada múltiplo que tome dos enteros y determine si el segundo es múltiplo del primero. La función deberá tomar dos argumentos enteros y devolver 1 si el segundo es un múltiplo del primero y 0 si no. Luego, utilice esta función en un programa que acepte como entrada una serie de pares de enteros.
+**P1**. Escriba una función llamada múltiplo que tome dos enteros y determine si el segundo es múltiplo del primero. La función deberá tomar dos argumentos enteros y devolver 1 si el segundo es un múltiplo del primero y 0 si no. Luego, utilice esta función en un programa que acepte como entrada una serie de pares de enteros.
 
-2. Escribir un programa que lea dos números **x** y **n** y en una función, calcule la suma de la progresión geométrica: 
+**P2**. Escribir un programa que lea dos números **x** y **n** y en una función, calcule la suma de la progresión geométrica: 
 
 ```
 1 + x + x^2 + x^3 + x^4 + ⋯ + x^n
 ```
 
-3. Escriba un programa en C para encontrar la suma de las series: 
+**P3**. Escriba un programa en C para encontrar la suma de las series: 
 
 ```
 1 - x^2/2! + x^4/4! - ...
@@ -104,7 +104,7 @@ Salida esperada:
 suma: -0.415873
 ```
 
-4. Dado el siguiente código fuente:
+**P4**. Dado el siguiente código fuente:
 
 ```C
 #include <stdio.h>
@@ -134,9 +134,9 @@ b. Escriba una función que genere un número aleatorio entre a y b. **Ayuda**: 
 
 c. Realice un programa que invocando la función anteriormente creada, funcione de manera similar al programa analizado en el punto a.
 
-5. Escriba una función que tome un valor entero y devuelva el número con sus dígitos en reversa. Por ejemplo, dado el numero 7631, la función deberá devolver 1367.
+**P5**. Escriba una función que tome un valor entero y devuelva el número con sus dígitos en reversa. Por ejemplo, dado el numero 7631, la función deberá devolver 1367.
 
-6. Una ecuación cuadrática es aquella que tiene la siguiente forma:
+**P6**. Una ecuación cuadrática es aquella que tiene la siguiente forma:
 
 ```
 a*x^2 + b*x + c = 0
@@ -183,7 +183,7 @@ int main() {
 
 c. Realizar un programa que solicite por teclado los valores de los coeficientes y de acuerdo a estos, despliegue si la ecuación cuadrática tiene raíces reales y distintas, reales e iguales o complejas conjugadas. Para tal fin se debe hacer uso de la función discriminante previamente creada.
 
-7. Para obtener las raíces de una ecuación de segundo grado utilizando la fórmula:
+**P7**. Para obtener las raíces de una ecuación de segundo grado utilizando la fórmula:
 
 ```
 x1 = (-b - D^(1/2))/(2*a)
@@ -242,7 +242,7 @@ b. Invocar en el main la función varias veces de tal manera que la salida sea l
 
 c. Realizar un programa que solicite al usuario los valores de los coeficientes y que haciendo uso de la función bachiller despliegue las raíces de estos coeficientes desplegados en pantalla.
 
-8. Escriba un programa que simule el lanzamiento de una moneda. En cada línea de entrada aparece el número de lanzamientos de la moneda. En la línea de salida correspondiente debe aparecer una secuencia con el resultado de cada lanzamiento ('C' cuando fue cara y 'S' cuando fue sello) junto con el número de veces que aparece cada lado. El programa deberá usar una función que se encargue de simular el lanzamiento de la moneda una sola vez, que no tome argumentos y que retorne 0 para la cara ('C') ó 1 para el sello ('T').
+**P8**. Escriba un programa que simule el lanzamiento de una moneda. En cada línea de entrada aparece el número de lanzamientos de la moneda. En la línea de salida correspondiente debe aparecer una secuencia con el resultado de cada lanzamiento ('C' cuando fue cara y 'S' cuando fue sello) junto con el número de veces que aparece cada lado. El programa deberá usar una función que se encargue de simular el lanzamiento de la moneda una sola vez, que no tome argumentos y que retorne 0 para la cara ('C') ó 1 para el sello ('T').
 
 Ayuda: Use las funciones srand() y rand() para simular el lanzamiento de la moneda.
 
@@ -256,7 +256,7 @@ CCSSS, #de caras = 2, # de sellos = 3
 SCCSCSCC, #de caras = 5, # de sellos = 3
 SCSCC, # de caras = 3, # de sellos = 2
 
-9. Las computadoras están jugando un papel creciente en la educación. Escriba un programa que ayudaría a un alumno de escuela primaria a aprender a multiplicar. Utilice rand() para producir dos enteros positivos de un dígito. A continuación debería imprimir una pregunta coma la siguiente:
+**P9**. Las computadoras están jugando un papel creciente en la educación. Escriba un programa que ayudaría a un alumno de escuela primaria a aprender a multiplicar. Utilice rand() para producir dos enteros positivos de un dígito. A continuación debería imprimir una pregunta coma la siguiente:
 
 ```
 ¿Cuánto es 6 veces 7?
@@ -265,7 +265,7 @@ SCSCC, # de caras = 3, # de sellos = 2
 A continuación el alumno escribe la respuesta. Su programa verifica la respuesta del alumno. Si es correcta imprime **"Muy bien!"** y a continuación solicita otra multiplicación. Si la respuesta es incorrecta imprimirá **"No. Por favor intenta nuevamente"** y a continuación permitirá que el alumno vuelva a intentar con la misma pregunta de forma repetida hasta que al final la conteste correctamente. El programa debe indicarle al alumno una forma de terminar la ejecución.
 
 
-10. La utilización de las computadoras en la educación se conoce como Instrucción Asistida por Computadora (CAI). Un problema que se desarrolla en los entornos CIA es la fatiga del alumno. Este problema puede ser enfrentado variando el diálogo de la computadora para retener la atención del alumno. Modifique el programa del ejercicio anterior de modo que este escoja de forma aleatoria uno de cuatro posibles mensajes tanto para respuestas correctas como para respuestas incorrectas. Los cuatro posibles mensajes en cada caso son:
+**P10**. La utilización de las computadoras en la educación se conoce como Instrucción Asistida por Computadora (CAI). Un problema que se desarrolla en los entornos CIA es la fatiga del alumno. Este problema puede ser enfrentado variando el diálogo de la computadora para retener la atención del alumno. Modifique el programa del ejercicio anterior de modo que este escoja de forma aleatoria uno de cuatro posibles mensajes tanto para respuestas correctas como para respuestas incorrectas. Los cuatro posibles mensajes en cada caso son:
 
 Respuestas correctas:
 
@@ -286,7 +286,7 @@ No. Trata de nuevo
 ```
 **Nota**: Mediante el generador de números aleatorios, seleccione un número entre 1 y 4 para desplegar un mensaje diferente para cada respuesta. Presente la respuesta mediante una estructura switch.
 
-11. Sistemas más avanzados de CAI vigilan el rendimiento del alumno a lo largo de un periodo de tiempo. La decisión para empezar un tema nuevo se basa a menudo en el éxito del alumno en relación con temas anteriores. Modifique el programa del ejercicio anterior para contar el número de respuestas correctas e incorrectas del estudiante. Una vez el estudiante decida terminar la ejecución del programa, el programa debe calcular y mostrar el porcentaje de respuestas correctas respecto al total de preguntas que le hizo el programa. Si el porcentaje es menor a 75%, el programa deberá imprimir el mensaje "**Por favor pídele ayuda al instructor"** y termina.
+**P11**. Sistemas más avanzados de CAI vigilan el rendimiento del alumno a lo largo de un periodo de tiempo. La decisión para empezar un tema nuevo se basa a menudo en el éxito del alumno en relación con temas anteriores. Modifique el programa del ejercicio anterior para contar el número de respuestas correctas e incorrectas del estudiante. Una vez el estudiante decida terminar la ejecución del programa, el programa debe calcular y mostrar el porcentaje de respuestas correctas respecto al total de preguntas que le hizo el programa. Si el porcentaje es menor a 75%, el programa deberá imprimir el mensaje "**Por favor pídele ayuda al instructor"** y termina.
 
 
 ## 3. Referencias
